@@ -1,0 +1,20 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int Power(int a,int b){
+    if(b==0) return 1;
+    if(b>0) return a*pow(a,b-1);
+    return 1/pow(a,-b);
+}
+
+
+int main() {
+    int a,b;
+    cin>>a>>b;
+    int res = Power(a,b);
+    cout<<res;
+    return 0;
+}
